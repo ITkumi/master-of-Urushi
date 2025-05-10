@@ -641,6 +641,7 @@ video {
 /* BEFOERE/AFTERグリッド */
 .services-section {
       background-color: #00161D;
+      padding: 60px 20px;
     }
 
     .services-box {
