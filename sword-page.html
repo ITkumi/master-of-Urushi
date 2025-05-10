@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sword-restoration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #00161D;
+    }
+    .header { background-color: #00161D; position: relative; z-index: 1000; }
+    .header-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    .logo-area { display: flex; align-items: center; text-decoration: none; color: #FEFEFE; }
+    .logo { height: 50px; width: 50px; object-fit: cover; margin-right: 10px; }
+    .site-title { font-size: 24px; font-family: 'Fraunces', serif; }
+    .nav { display: none; }
+    .nav-list { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+    .nav-list li a { text-decoration: none; color: #FEFEFE; font-size: 16px; position: relative; padding: 5px 0; font-family: 'Fraunces', serif; }
+    .nav-list li a::before, .nav-list li a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0;
+      height: 2px;
+      background-color: #FEFEFE;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .nav-list li a::before { top: 0; }
+    .nav-list li a::after { bottom: 0; }
+    .nav-list li a:hover::before, .nav-list li a:hover::after { transform: scaleX(1); }
+    .hamburger { display: flex; flex-direction: column; justify-content: space-between; width: 25px; height: 18px; cursor: pointer; }
+    .hamburger span { background-color: #00161D; height: 3px; border-radius: 2px; transition: all 0.3s ease; }
+    .mobile-nav { display: none; flex-direction: column; background-color: #fefefe; padding: 10px 20px; position: absolute; top: 100%; left: 0; right: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .mobile-nav ul { list-style: none; padding: 0; margin: 0; }
+    .mobile-nav ul li { margin-bottom: 10px; }
+    .mobile-nav ul li a { text-decoration: none; color: #FEFEFE; font-size: 18px; }
+    @media (min-width: 768px) {
+      .hamburger { display: none; }
+      .nav { display: block; }
+      .mobile-nav { display: none !important; }
+    }
+    .saya-section { max-width: 960px; margin: 80px auto; padding: 0 20px; }
+    .section-title { font-size: 40px; text-align: center; margin-bottom: 10px; color: #FEFEFE; font-family: 'Fraunces', serif; }
+    .section-subtitle { font-size: 18px; text-align: center; color: #FEFEFE; margin-bottom: 40px; font-family: 'Fraunces', serif; }
+    .section-block { border: 1px solid rgba(64,80,86,0.75); background-color: #00161D; padding: 40px 30px; box-shadow: 0 0 10px rgba(0,0,0,0.03); }
+    .section-block p { font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #FEFEFE; font-family: 'Fraunces', serif; }
+    .section-block .en { font-style: italic; color: #FEFEFE; font-size: 1rem; font-family: 'Fraunces', serif; }
+    .block-heading { font-weight: bold; font-size: 1.3rem; margin-top: 40px; margin-bottom: 15px; color: #FEFEFE; }
+    .image-box { text-align: center; margin: 40px 0; }
+    .image-box img { max-width: 100%; height: auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    @media (max-width: 768px) {
+      .saya-section { margin: 40px auto; }
+      .section-block { padding: 20px 10px; }
+      .section-title { font-size: 30px; }
+      .section-block p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-container">
+    <a href="index.html" class="logo-area">
+      <img src="images/sword_LOGO_2.svg" alt="logo" class="logo">
+      <span class="site-title">Master of Urushi</span>
+    </a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#restoration">Restoration / Customization</a></li>
+        <li><a href="index.html#exhibition">Exhibition Info</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#restoration">Restoration / Customization</a></li>
+      <li><a href="index.html#exhibition">Exhibition Info</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="sword-restoration" class="saya-section">
+  <div class="section-block">
+    <h2 class="section-title">刀剣の修復：Sword Restoration</h2>
+    <p class="section-subtitle">伝統の技で、時を超えて蘇る</p>
+    <p>日本刀の美しさは、「刀身」だけではありません。長年使われた鞘（さや）や拵え（こしらえ）は、塗装の剥がれや艶の劣化、細かな傷が目立ってきます。</p>
+    <p class="en">The beauty of a Japanese sword lies not only in the blade. Over time, the scabbard (saya) and mountings (koshirae) can suffer from peeling lacquer, faded luster, and surface damage.</p>
+    <p>当方では、漆による伝統技法を用いて、刀剣の外装を丁寧に修復・再生いたします。</p>
+    <p class="en">Using traditional Japanese lacquer techniques, I carefully restore and rejuvenate these essential elements.</p>
 
+    <div class="image-box">
+      <img src="images/Urushi-image12.jpg" alt="刀剣の修復">
+    </div>
+
+    <h4 class="block-heading">【修復の目的】</h4>
+    <p>・鑑賞価値の向上（見栄えの回復）<br>
+       ・実用・展示に適した状態への整備<br>
+       ・次世代に受け継ぐための保全</p>
+    <p class="en">・Enhancing aesthetic and collectible value<br>
+       ・Preparing for safe display or use<br>
+       ・Preserving the piece for future generations</p>
+
+    <h4 class="block-heading">【対応可能な作業例】</h4>
+    <p>・鞘の艶上げ（再研磨・再塗装）<br>
+       ・剥がれた漆の補修<br>
+       ・小傷・欠けの補填と塗り直し<br>
+       ・新調鞘の製作（要相談）</p>
+    <p class="en">High-gloss polishing or re-lacquering of scabbards<br>
+       Repair of flaked or damaged lacquer<br>
+       Filling and refinishing of small cracks or chips<br>
+       Custom new scabbard production (on request)</p>
+
+    <h4 class="block-heading">【ご注意】</h4>
+    <p>※ 刀身そのものの研ぎや金具の製作は行っておりません。<br>
+       ※ 作業には1〜3ヶ月程度かかる場合があります。<br>
+       ※ 海外からのご依頼は、現地ブローカーを通じて対応しております。</p>
+    <p class="en">Please Note:<br>
+       I do not polish blades or manufacture fittings.<br>
+       Restoration work typically takes 1–3 months.<br>
+       International requests are handled through local brokers only.</p>
+  </div>
+</section>
+</body>
+</html>
