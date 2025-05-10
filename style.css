@@ -120,7 +120,15 @@ body {
   font-size: 16px;
   font-family: 'Fraunces 120 Light', serif;
 }
-
+.section-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* レスポンシブ */
 @media (min-width: 768px) {
   .hamburger {
