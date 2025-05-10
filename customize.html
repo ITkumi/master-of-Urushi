@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>sword-restoration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #00161D;
+    }
+    .header { background-color: #00161D; position: relative; z-index: 1000; }
+    .header-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    .logo-area { display: flex; align-items: center; text-decoration: none; color: #FEFEFE; }
+    .logo { height: 50px; width: 50px; object-fit: cover; margin-right: 10px; }
+    .site-title { font-size: 24px; font-family: 'Fraunces', serif; }
+    .nav { display: none; }
+    .nav-list { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+    .nav-list li a { text-decoration: none; color: #FEFEFE; font-size: 16px; position: relative; padding: 5px 0; font-family: 'Fraunces', serif; }
+    .nav-list li a::before, .nav-list li a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0;
+      height: 2px;
+      background-color: #FEFEFE;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .nav-list li a::before { top: 0; }
+    .nav-list li a::after { bottom: 0; }
+    .nav-list li a:hover::before, .nav-list li a:hover::after { transform: scaleX(1); }
+    .hamburger { display: flex; flex-direction: column; justify-content: space-between; width: 25px; height: 18px; cursor: pointer; }
+    .hamburger span { background-color: #00161D; height: 3px; border-radius: 2px; transition: all 0.3s ease; }
+    .mobile-nav { display: none; flex-direction: column; background-color: #fefefe; padding: 10px 20px; position: absolute; top: 100%; left: 0; right: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .mobile-nav ul { list-style: none; padding: 0; margin: 0; }
+    .mobile-nav ul li { margin-bottom: 10px; }
+    .mobile-nav ul li a { text-decoration: none; color: #FEFEFE; font-size: 18px; }
+    .section-divider { border: none; height: 1px; background-color: #ccc; margin: 30px 0; max-width: 850px; margin-left: auto; margin-right: auto; }
+    @media (min-width: 768px) {
+      .hamburger { display: none; }
+      .nav { display: block; }
+      .mobile-nav { display: none !important; }
+    }
+    .saya-section { max-width: 960px; margin: 80px auto; padding: 0 20px; }
+    .section-title { font-size: 40px; text-align: center; margin-bottom: 10px; color: #FEFEFE; font-family: 'Fraunces', serif; }
+    .section-subtitle { font-size: 18px; text-align: center; color: #FEFEFE; margin-bottom: 40px; font-family: 'Fraunces', serif; }
+    .section-block { border: 1px solid rgba(64,80,86,0.75); background-color: #00161D; padding: 40px 30px; box-shadow: 0 0 10px rgba(0,0,0,0.03); }
+    .section-block p { font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #FEFEFE; font-family: 'Fraunces', serif; }
+    .section-block .en { font-style: italic; color: #FEFEFE; font-size: 1rem; font-family: 'Fraunces', serif; }
+    .block-heading { font-weight: bold; font-size: 1.3rem; margin-top: 40px; margin-bottom: 15px; color: #FEFEFE; }
+    .image-box { text-align: center; margin: 40px 0; }
+    .image-box img { max-width: 100%; height: auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    @media (max-width: 768px) {
+      .saya-section { margin: 40px auto; }
+      .section-block { padding: 20px 10px; }
+      .section-title { font-size: 30px; }
+      .section-block p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-container">
+    <a href="index.html" class="logo-area">
+      <img src="https://static.wixstatic.com/media/38e5fb_14373cdd8853420a8d199dd4fef6d62c~mv2.png" alt="logo" class="logo">
+      <span class="site-title">Master of Urushi</span>
+    </a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#restoration">Restoration / Customization</a></li>
+        <li><a href="index.html#exhibition">Exhibition Info</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#restoration">Restoration / Customization</a></li>
+      <li><a href="index.html#exhibition">Exhibition Info</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="sword-customization" class="saya-section">
+    <div class="section-block">
+      <h2 class="section-title">カスタマイズ：Sword Customization</h2>
+      <p>刀剣は、ただの武具ではありません。時代背景や所有者の美意識を反映した「装い」こそが、その魅力を一層引き立てます。<br>
+        当方では、江戸期・幕末・武家拵えなど、時代や用途に応じた意匠のご相談・再現も承っております。</p>
+      <p class="en">
+        A Japanese sword is more than a weapon—it’s a reflection of history and personal aesthetic. The choice of scabbard (saya), handle wrapping (tsuka), and guard (tsuba) often tells a story.<br>
+        I offer custom work inspired by specific eras or styles, such as Edo-period aesthetics, samurai mountings, and more.
+      </p>
+
+        <div class="image-box">
+      <img src="images/Urushi-image8.jpg" alt="刀剣の修復">
+    </div>
+
+      <h4 class="block-heading">【対応例】</h4>
+      <p>・鞘塗りの色味・仕上げの選定（時代・階級に応じて）<br>
+         ・柄巻きの素材や配色の提案<br>
+         ・つばや金具の意匠調整（※パーツ自体の製作は行いません）</p>
+      <p class="en">
+        ・Custom lacquer finish for scabbards (era-appropriate colors and gloss)<br>
+        ・Consultation on tsuka materials and color coordination<br>
+        ・Aesthetic matching of tsuba and metal fittings (*fitting production not provided)<br>
+        ・Full design coordination for collections or exhibitions
+      </p>
+
+        <div class="section-divider"></div>
+
+      <p>「この刀は、こうあるべきだ」——その想いを形にします。お気軽にご相談ください。</p>
+      <p class="en">“This sword deserves to look as it once did.” Let’s bring your vision to life—I'm here to help.</p>
+    </div>
+  </section>
+</body>
+</html>
 
