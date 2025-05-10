@@ -12,7 +12,6 @@ a {
 }
 .header {
   background-color: #00161D;
-  /* border-bottom: 1px solid #ddd; */
   position: relative;
   z-index: 1000;
 }
@@ -36,7 +35,7 @@ a {
 }
 .site-title {
   font-size: 24px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
 }
 
 /* PC用ナビ */
@@ -56,7 +55,7 @@ a {
   font-size: 16px;
   position: relative;
   padding: 5px 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
 }
 .nav-list li a::before,
 .nav-list li a::after {
@@ -220,23 +219,6 @@ video {
   }
 }
 
-/* #hero {
-  position: relative;
-}
-
-#hero video {
-  width: 100%;
-  height: auto;
-}
-
-.hero-title {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  font-size: 2rem;
-  font-weight: bold;
-} */
-
 /* グリッド（右画像） */
 .column-section1 {
   display: flex;
@@ -250,7 +232,7 @@ video {
 .text-column {
   flex: 1;
   color: #FEFEFE;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -331,7 +313,7 @@ video {
   background-color: rgba(0, 22, 29, 0.85); /* 半透明背景で可読性UP */
   padding: 30px;
   color: #FEFEFE;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
@@ -389,7 +371,7 @@ video {
   flex-direction: column;
   justify-content: flex-start;
   color: #FEFEFE;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
   line-height: 1.6;
 }
 
@@ -444,7 +426,7 @@ video {
   padding: 60px 10%;
   background-color: #405056; /* 別背景色 */
   color: #fff;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
 }
 
 .awards-column {
@@ -461,7 +443,7 @@ video {
 
 .title-column hr {
   border: none;
-  border-top: 2px solid #fff;
+  border-top: 2px solid #FEFEFE;
   width: 60px;
 }
 
@@ -530,7 +512,7 @@ video {
   margin-bottom: 2rem;
   color: #fff;
   font-weight: 300;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
   text-align: left;
 }
 
@@ -588,7 +570,7 @@ video {
 
 .section-restoration h2 {
   font-size: 42px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
   font-weight: 300;
   color: #FEFEFE;
   text-align: left;
@@ -663,9 +645,8 @@ video {
     .services-box {
       max-width: 700px;
       margin: 50px auto;
-      /* padding: 30px; */
       border: 1px solid #00161D;
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces 120 Light', serif;
       line-height: 1.8;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -758,7 +739,7 @@ video {
 
 #contact h2 {
       font-size: 42px;
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces 120 Light', serif;
       font-weight: 300;
       color: #FEFEFE;
       text-align: left;
@@ -846,7 +827,7 @@ form input, form textarea, form button {
     }
     .card-container h2 {
       font-size: 42px;
-      font-family: 'Fraunces', serif;
+      font-family: 'Fraunces 120 Light', serif;
       font-weight: 300;
       color: #FEFEFE;
       text-align: left;
@@ -906,7 +887,7 @@ form input, form textarea, form button {
   color: #fff;
   padding: 40px 20px;
   text-align: center;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Fraunces 120 Light', serif;
 }
 
 .footer-container {
@@ -927,12 +908,12 @@ form input, form textarea, form button {
 }
 
 .footer-logo a {
-  color: #fff;
+  color: #FEFEFE;
   text-decoration: none;
 }
 
 .footer-links a {
-  color: #ccc;
+  color: #FEFEFE;
   text-decoration: none;
   font-size: 14px;
 }
