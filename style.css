@@ -3,9 +3,10 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces 120 Light', serif;
   background-color: #00161D;
   color: #FEFEFE;
+  padding-top: 100px; /* ヘッダーが固定された分のスペース */
 }
 a {
   text-decoration: none;
