@@ -754,6 +754,49 @@ video {
       text-align: left;
       margin-bottom: 50px;
     }
+.sns-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.sns-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.sns-icons img:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-block {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.whatsapp-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.app-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.qr-code img {
+  width: 150px;
+  margin: 10px 0;
+}
 
 /* フォームカスタマイズ */
 form {
