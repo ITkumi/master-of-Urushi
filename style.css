@@ -51,8 +51,8 @@ header {
   display: flex;
   gap: 30px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 40px; /* 左右の余白 */
 }
 .nav-list li a {
   text-decoration: none;
