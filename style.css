@@ -88,7 +88,7 @@ body {
   cursor: pointer;
 }
 .hamburger span {
-  background-color: #00161D;
+  background-color: #FEFEFE;
   height: 3px;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -98,7 +98,7 @@ body {
 .mobile-nav {
   display: none;
   flex-direction: column;
-  background-color: #fefefe;
+  background-color: #00161D;
   padding: 10px 20px;
   position: absolute;
   top: 100%;
