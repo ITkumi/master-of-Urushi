@@ -807,6 +807,26 @@ video {
   margin: 10px 0;
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover img {
+  transform: scale(1.1);
+}
+
 /* フォームカスタマイズ */
 form {
   display: flex;
