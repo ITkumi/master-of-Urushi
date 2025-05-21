@@ -344,10 +344,12 @@ video {
     box-shadow: none;
     padding: 20px 0;
   }
-
-  .concept-text-overlay {
-    margin-top: 20px;
-  }
+    .concept-text-overlay {
+        margin-top: 200px;
+        margin-right: -10px;
+        padding-left: 20px;
+        width: 85%;
+    }
 }
 
 /* 3グリッドカラム（左大画像） */
